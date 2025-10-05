@@ -14,7 +14,46 @@
     </nav>
     <div class="container">
         <h2 id="my-title">ITF Simple Bank</h2>
-        Welcome to my first HTML + CSS + JS website!
+        <p>Welcome to my first HTML + CSS + JS website!</p>
+        <section id="history">
+            <textarea id="amount-history" rows="5" cols="100" readonly></textarea>
+        </section>
+
+        <h1>Account Overview</h1>
+        <section id="Account Information">
+            <h3>Account Information</h3>
+            <p>Name: Bannasorn Thinthaworn</p>
+            <p>Type: Savings Account</p>
+        </section>
+
+        <section id="Balance Information">
+            <h3>Balance Information</h3>
+            <p>Current account balance:    <input type="number" id="current_account"></p>
+            <p>Current cash balance:   <input type="number" id="current_cash"></p>
+            <button onclick="change()">Change</button>
+        </section>
+
+        <section id="Bank Operation">
+            <h3>Bank Operation</h3>
+            <select id="Deposit_Withdraw">
+                <option value="Deposit">Deposit</option>
+                <option value="Withdraw">Withdraw</option>
+            </select>
+            <input type="number" id="Deposit_Withdraw-amount">
+            <p><button onclick="proceed()">Proceed</button></p>
+        </section>
+
+        <h1>Financial Tools</h1>
+        <section id="Currency Converter">
+            <h3>Currency Converter</h3>
+            <p>Input balance: <input type="number" id="input_balance" value="0"></p>
+            <p>Output balance: <input type="number" id="output_balance" value="0"></p>
+            <p>Input currency: <select id="usd_thb">
+                <option value="USD">USD</option>
+                <option value="THB">THB</option>
+            </select>
+            <button onclick="convert()">convert</button></p>
+        </section>
     </div>
     Enter number: <input type="number" id="myinput" value="0">
     <button onclick="add()">+1</button>
