@@ -24,16 +24,28 @@ function proceed() {
     const historyBox = document.getElementById("amount-history");
     let current_account = Number(document.getElementById("current_account").value);
     let current_cash = Number(document.getElementById("current_cash").value);
+    
     if (option === "Deposit") {
-        current_account += money
-        current_cash -= money
+        if (money > current_cash) {
+            message = `${lineNumber}, Couldn't deposit entered balance. (Insufficient cash balance)`;
+        }
+        else {
+            current_account += money
+            current_cash -= money
+            message = `${lineNumber}, Current Account Balance: ${current_account}, Current Cash Balance: ${current_cash}`;
+        }
     } else if (option === "Withdraw") {
-        current_account -= money
-        current_cash += money
+        if (money > current_account) {
+            message = `${lineNumber}, Couldn't withdraw entered balance. (Insufficient account balance)`;
+        }
+        else {
+            current_account -= money
+            current_cash += money
+            message = `${lineNumber}, Current Account Balance: ${current_account}, Current Cash Balance: ${current_cash}`;
+        }
     }
     document.getElementById("current_account").value = current_account;
     document.getElementById("current_cash").value = current_cash;
-    const message = `${lineNumber}, Current Account Balance: ${current_account}, Current Cash Balance: ${current_cash}`;
     historyBox.value = message +"\n"+ historyBox.value;
     lineNumber++;
 }
