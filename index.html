@@ -15,52 +15,62 @@
         <h2>ITF Website</h2>
         <p>Week 14</p>
     </nav>
-    <div class="container">
         <div class="img-bank"><img src="images/Bank.webp" alt="bank"></div>
-        <h2 id="my-title">ITF Simple Bank</h2>
-        <p>Welcome to my first HTML + CSS + JS website!</p>
-        <section id="history">
-            <textarea id="amount-history" rows="5" cols="100" readonly></textarea>
-        </section>
+            <h2 id="my-title">ITF Simple Bank</h2>
+            <p>Welcome to my first HTML + CSS + JS website!</p>
+            <section id="history">
+                <textarea id="amount-history" rows="5" cols="100" readonly></textarea>
+            </section>
+        
+    <div class="container">
+        <div class="left" style="margin: 5px;">
+            <div style="display: flex; align-items: center;">
+                <img src="images/abstract-user.png" alt="user" style="width: 60px; height: 60px; margin-right: 8px;">
+                <h1>Account Overview</h1>
+            </div>
+            <div class="account_overview">
+                <section id="Account_Information">
+                    <div class="lineAccountInfo"><h3>Account Information:</h3></div>
+                    <p>Name: Bannasorn Thinthaworn</p>
+                    <p>Type: Savings Account</p>
+                </section>
 
-        <h1>Account Overview</h1>
-        <div class="account_overview">
-            <section id="Account_Information">
-            <div class="lineAccountInfo"><h3>Account Information:</h3></div>
-            <p>Name: Bannasorn Thinthaworn</p>
-            <p>Type: Savings Account</p>
-        </section>
+            <section id="Balance_Information">
+                <div class="lineBalanInfo"><h3>Balance Information:</h3></div>
+                <p>Current account balance:    <input type="number" class="custom-input1" id="current_account"></p>
+                <p>Current cash balance:   <input type="number" class="custom-input1" id="current_cash"></p>
+                <button class="custom-button1" onclick="change()">Change</button>
+            </section>
 
-        <section id="Balance_Information">
-            <div class="lineBalanInfo"><h3>Balance Information:</h3></div>
-            <p>Current account balance:    <input type="number" class="custom-input1" id="current_account"></p>
-            <p>Current cash balance:   <input type="number" class="custom-input1" id="current_cash"></p>
-            <button class="custom-button1" onclick="change()">Change</button>
-        </section>
-
-        <section id="Bank_Operation">
-            <div class="lineBankOper"><h3>Bank Operation:</h3></div>
-            <select class="custom-button2" id="Deposit_Withdraw">
-                <option value="Deposit">Deposit</option>
-                <option value="Withdraw">Withdraw</option>
-            </select>
-            <input type="number" class="custom-input1" id="Deposit_Withdraw-amount">
-            <p><button class="custom-button1" onclick="proceed()">Proceed</button></p>
-        </section>
+            <section id="Bank_Operation">
+                <div class="lineBankOper"><h3>Bank Operation:</h3></div>
+                <select class="custom-button2" id="Deposit_Withdraw">
+                    <option value="Deposit">Deposit</option>
+                    <option value="Withdraw">Withdraw</option>
+                </select>
+                <input type="number" class="custom-input1" id="Deposit_Withdraw-amount">
+                <p><button class="custom-button1" onclick="proceed()">Proceed</button></p>
+            </section>
+            </div>
         </div>
 
-        <h1>Financial Tools</h1>
-        <div class="financial_tools">
-        <section id="Currency_Converter">
-            <div class="ilneCurrenConv"><h3>Currency Converter:</h3></div>
-            <p>Input balance: <input type="number" class="custom-input2" id="input_balance" value="0"></p>
-            <p>Output balance: <input type="number" class="custom-input2" id="output_balance" value="0"></p>
-            <p>Input currency: <select class="custom-button4" id="usd_thb">
-                <option value="USD">USD</option>
-                <option value="THB">THB</option>
-            </select>
-            <button class="custom-button3" onclick="convert()">convert</button></p>
-        </section>
+        <div class="right" style="margin: 5px;">
+            <div style="display: flex; align-items: center;">
+                <img src="images/finance-tools-icon.png" alt="finance-tools-icon" style="width: 60px; height: 60px; margin-right: 8px;">
+                <h1>Financial Tools</h1>
+            </div>
+            <div class="financial_tools">
+            <section id="Currency_Converter">
+                    <div class="ilneCurrenConv"><h3>Currency Converter:</h3></div>
+                    <p>Input balance: <input type="number" class="custom-input2" id="input_balance" value="0"></p>
+                    <p>Output balance: <input type="number" class="custom-input2" id="output_balance" value="0"></p>
+                    <p>Input currency: <select class="custom-button4" id="usd_thb">
+                        <option value="USD">USD</option>
+                        <option value="THB">THB</option>
+                    </select>
+                    <button class="custom-button3" onclick="convert()">convert</button></p>
+            </section>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
